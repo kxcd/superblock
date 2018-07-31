@@ -10,8 +10,8 @@ You need to have the dash-cli in your PATH environment variable, update your ~/.
     cd /tmp/
     git clone https://github.com/kxcd/superblock
     cd superblock
-    chmod a+x supeblock.sh
-    ./superblock
+    chmod a+x superblock.sh
+    ./superblock.sh
 
 
 ## Making it permanent
