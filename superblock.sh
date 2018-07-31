@@ -33,7 +33,7 @@ superblock(){
 	# A Super block from the past.
 	SUPER_BLOCK=880648
 	# The time taken to create a new block
-	BLOCK_TIME=2.5
+	BLOCK_TIME=2.625
 	S_UNITS="minutes";V_UNITS="minutes"
 
 	CURRENT_BLOCK=$(dash-cli getblockcount)
