@@ -11,6 +11,9 @@ _convert_time_units(){
 	elif (( $(echo "scale=2;$1>300"|bc -l) ));then
 		_TIME=$(echo "$1/60"|bc)
 		_UNITS="hours"
+	else
+		# Nothing to convert, just return
+		return 0
 	fi
 	case $2 in
 		S)
