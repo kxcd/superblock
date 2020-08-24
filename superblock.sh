@@ -1,10 +1,9 @@
 #!/bin/bash
-#set -x
 
 # First arg is the time in minutes.
 # Second arg is V for vote time, and S for super block time
 _convert_time_units(){
-	if [[ $# -ne 2 ]];then return 1;fi
+	if (( $# != 2 ));then return 1;fi
 	if (( $(echo "$1>2880"|bc -l) ));then
 		_TIME=$(echo "scale=2;$1/60/24"|bc)
 		_UNITS="days"
@@ -66,5 +65,3 @@ superblock(){
 	done
 	unset SUPER_BLOCK SUPER_BLOCK_INTERVAL CURRENT_BLOCK S_TIME S_UNITS BLOCK_TIME VOTING_DEADLINE V_TIME V_UNITS _TIME _UNITS
 }
-superblock
-
